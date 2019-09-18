@@ -53,7 +53,7 @@ namespace FizzBuzz2
             int newPosition = 0;
 
 
-            //set empty values in new array to values in old array
+            //remove the number
             for (int i = 0; i < thisArray.Length; i++)
             {
                 
@@ -94,6 +94,7 @@ namespace FizzBuzz2
         }
         public virtual void Clear()
         {
+           
             for (int i = 0; i < arraySize; i++)
             {
                 thisArray[i] = nothing;
@@ -109,14 +110,6 @@ namespace FizzBuzz2
             {
                 return thisArray[index];
             }
-        }
-        void Buzz()
-        {
-            Console.WriteLine("Buzz");
-        }
-        void Fizz()
-        {
-            Console.WriteLine("Fizz");
         }
         public int Length
         {

@@ -39,21 +39,25 @@ namespace FizzBuzz2
 
                 if ((int)this[i] % 3 == 0 && (int)this[i] % 5 == 0)
                 {
+                    //if divisable by 3 and 5 call fizzbuzz
                     Console.Write(this[i]);
                     OnFizzbuzz(EventArgs.Empty);
                 }
                 else if ((int)this[i] % 3 == 0)
                 {
+                    //if divisable by 3 call fizz
                     Console.Write(this[i]);
                     OnFizz(EventArgs.Empty);
                 }
                 else if ((int)this[i] % 5 == 0)
                 {
+                    //if divisable by 5 call buzz
                     Console.Write(this[i]);
                     OnBuzz(EventArgs.Empty);
                 }
                 else
                 {
+                    //remove all other numbers
                     Remove(i);
                     i--;
                 }
@@ -61,6 +65,7 @@ namespace FizzBuzz2
         }
         public void Print()
         {
+            //print all numbers in array
             for (int i = 0; i < Length; i++)
             {
                 Console.WriteLine(this[i]);
